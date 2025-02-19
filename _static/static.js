@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.static(path.resolve(__dirname, 'assets')))
 app.use((req, res) => {
-    res.writeHead(200, {'Content-Type': "text/plain"})
+    res.writeHead(404, {'Content-Type': "text/plain"})
     res.end("File not Found!")
 })
 

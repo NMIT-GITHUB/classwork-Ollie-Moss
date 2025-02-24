@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = 3000;
 
-const entries = [];
+const entries = [{ title: "title", body: "body", published: new Date() }];
 app.locals.entries = entries;
 
 app.set("views", path.resolve(__dirname, "views"));

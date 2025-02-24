@@ -1,0 +1,21 @@
+<% include ('header') %>
+
+<% if (entries.length) { %>
+    <% entries.forEach(function(entry) { %>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="text-muted">
+                    <%= entry.published %>
+                </div>
+                <%= entry.title %>
+            </div>
+            <div class="panel-body">
+                <%= entry.body %>
+            </div>
+        </div>
+
+    <% }) %>
+<% } else { %> 
+    <p>No entries!</p> <a href="/new-entry">Add the information</a>
+<% }%>
+<% include ('footer') %>
